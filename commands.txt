@@ -1,0 +1,29 @@
+// Roll 1-6
+!commands add !roll $(eval `$(touser) rolled ${Math.floor(Math.random() * 6) + 1} 🎲`)
+
+// scissor paper rock  
+
+!commands add !order $(eval g=["Scissors ✂","Paper 📄","Rock 🗿"];rt= ["You got","Lai","Lau","Tmlai"];`$(touser) ${rt[Math.floor(Math.random()*rt.length)]} ${g[Math.floor(Math.random()*g.length)]}`)
+
+
+// show random outputs on the same commmand 
+
+!commands add !like $(eval g=["​Like hanney lai glacier pakka 😎","Like hanera maya dekham hai sathi haru 🤫","1 Like = 100 Years Good Luck 😅"];g[Math.floor(Math.random()*g.length)];)
+
+// command with a user filter (The authentication is meh so implement wisely)
+
+!commands add cp -ul:moderator $(eval u=decodeURIComponent(`$(user)`);q=decodeURIComponent(`$(querystring)`);j='kera';if(u=='Edw9n'){q}else{u+' u cant, suri'};)
+
+// give user random food items
+
+!commands add $(eval rt= ["You got","Lai","Lau","Tmlai"];g=["Sushi","Mo:MO","Pizza","Burger","Chips","Alu","Pasta","Masu Bhaat","PaniPuri","Kera","Sekuwa","Food Item Of Your Choice"];resStr="$(touser)"+" "+rt[Math.floor(Math.random()*rt.length)]+" "+g[Math.floor(Math.random()*g.length)];)
+// rt is a list of string to sound human like xD
+
+
+// give users random pubg guns
+!gun $(eval var g =["SCAR-L","M16A4","Groza","AKM","AUG A3","M416","QBZ","Beryl M762","Mk47 Mutant","G36C","SKS","Mk14","Mini 14","SLR","QBU","VSS","UZI","UMP45","Thompson SMG","Vector","PP-19 Bizon","Win-94","MP5K","AWM","M24","Mosin Nagant","DP-28","M249",
+"MG3","S1897","S686","S12K","DBS","Crossbow","Pan","P1911","P92","R1895","P18C","R45","Flare Gun","Skorpion","Deagle"];resStr = "$(touser) You got "+ g[Math.floor(Math.random()g.length)])
+
+// time based on the query string 
+
+!commands edit !time $(eval q=querystring.toLowerCase(); f="h:mm:a";if(q=='np'{$(time Australia/Brisbane f)};else if(q=='us'{$(time US/Michigan f)};(q=='au'{$(time Australia/Brisbane f)};))))
