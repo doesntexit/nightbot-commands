@@ -12,7 +12,7 @@
 
 // command with a user filter (The authentication is meh so implement wisely)
 
-!commands add cp -ul:moderator $(eval u=decodeURIComponent(`$(user)`);q=decodeURIComponent(`$(querystring)`);j='kera';if(u=='Edw9n'){q}else{u+' u cant, suri'};)
+!commands add cp -ul=moderator $(eval u=decodeURIComponent(`$(user)`);q=decodeURIComponent(`$(querystring)`);j='kera';if(u=='Edw9n'){q}else{u+' u cant, suri'};)
 
 // give user random food items
 
