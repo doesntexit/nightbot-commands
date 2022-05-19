@@ -12,7 +12,7 @@
 
 // command with a user filter (The authentication is meh so implement wisely)
 
-!editcom . -ul=moderator $(eval u=decodeURIComponent(`$(userid)`);q=decodeURIComponent(`$(querystring)`);if(u=='UChvLId-mbyGdZyDHqpgRiww'){q}else{'noU'})
+!editcom . -ul=moderator $(eval u=`$(userid)`);q=`$(querystring)`;if(u=='UChvLId-mbyGdZyDHqpgRiww'){q}else{'noU'})
 // give user random food items
 
 !commands add $(eval rt= ["You got","Lai","Lau","Tmlai"];g=["Sushi","Mo:MO","Pizza","Burger","Chips","Alu","Pasta","Masu Bhaat","PaniPuri","Kera","Sekuwa","Food Item Of Your Choice"];resStr="$(touser)"+" "+rt[Math.floor(Math.random()*rt.length)]+" "+g[Math.floor(Math.random()*g.length)];)
