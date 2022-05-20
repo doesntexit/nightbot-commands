@@ -1,6 +1,11 @@
 // Roll 1-6
 !commands add !roll $(eval `$(touser) rolled ${Math.floor(Math.random() * 6) + 1} 🎲`)
 
+// love - compatibility 
+
+!addcom !love $(eval m=Math.floor(Math.random()*100);u=`$(user)`;q=`$(query)`;if(q){`${u} loves ${q}. They are ${m}% compatible`}else{`I love ${u}. We are ${m}% compatible`})
+
+
 // scissor paper rock  
 
 !commands add !order $(eval g=["Scissors ✂","Paper 📄","Rock 🗿"];rt= ["You got","Lai","Lau","Tmlai"];`$(touser) ${rt[Math.floor(Math.random()*rt.length)]} ${g[Math.floor(Math.random()*g.length)]}`)
@@ -10,9 +15,10 @@
 
 !commands add !like $(eval g=["​Like hanney lai glacier pakka 😎","Like hanera maya dekham hai sathi haru 🤫","1 Like = 100 Years Good Luck 😅"];g[Math.floor(Math.random()*g.length)];)
 
-// command with a user filter (The authentication is meh so implement wisely)
+// command with a user filter u=your channel id 
 
-!editcom . -ul=moderator $(eval u=`$(userid)`);q=`$(querystring)`;if(u=='UChvLId-mbyGdZyDHqpgRiww'){q}else{'noU'})
+!addcom . -ul=moderator $(eval u=`$(userid)`);q=`$(querystring)`;if(u=='UChvLId-mbyGdZyDHqpgRiww'){q}else{'noU'})
+
 // give user random food items
 
 !commands add $(eval rt= ["You got","Lai","Lau","Tmlai"];g=["Sushi","Mo:MO","Pizza","Burger","Chips","Alu","Pasta","Masu Bhaat","PaniPuri","Kera","Sekuwa","Food Item Of Your Choice"];resStr="$(touser)"+" "+rt[Math.floor(Math.random()*rt.length)]+" "+g[Math.floor(Math.random()*g.length)];)
